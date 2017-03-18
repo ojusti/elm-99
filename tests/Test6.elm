@@ -17,14 +17,14 @@ suite =
         ]
 
 isPalindrome : List a -> Test
-isPalindrome list =
-    test (toString list) <|
+isPalindrome xs =
+    test (toString xs) <|
         \() -> 
-            Expect.true "should be palindrome" (Src6.isPalindrome list)
+            Expect.true "should be palindrome" (Src6.isPalindrome xs)
 
 isNotPalindrome : List a -> Test
-isNotPalindrome list =
-    test (toString list) <|
+isNotPalindrome xs =
+    test (toString xs) <|
         \() -> 
-            Expect.false "should not be palindrome" (Src6.isPalindrome list)
+            Expect.false "should not be palindrome" (Src6.isPalindrome xs)
             
