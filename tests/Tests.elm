@@ -8,7 +8,7 @@ import TestExtra1
 
 all : Test
 all =
-    describe "99 problems" 
+    describe "99 problems"
         [ Test6.suite
         , Test7.suite
         , TestExtra1.suite

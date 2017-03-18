@@ -6,21 +6,23 @@ import Src7 exposing (..)
 
 
 suite : Test
-suite = 
+suite =
     describe "Problem 7"
-        [ flattenAndCompare nl1 
-            <| List.range 1 9
-        , flattenAndCompare (SubList [ Elem 1, Elem 2 ]) 
-            <| [ 1, 2 ]
-        , flattenAndCompare (SubList [ Elem "a", Elem "b" ]) 
-            <| [ "a", "b" ]
-        , flattenAndCompare (SubList [ ]) 
-            <| [ ]
+        [ flattenAndCompare nl1 <|
+            List.range 1 9
+        , flattenAndCompare (SubList [ Elem 1, Elem 2 ]) <|
+            [ 1, 2 ]
+        , flattenAndCompare (SubList [ Elem "a", Elem "b" ]) <|
+            [ "a", "b" ]
+        , flattenAndCompare (SubList []) <|
+            []
         ]
+
 
 nl0 : NestedList number
 nl0 =
     SubList [ Elem 1, Elem 2 ]
+
 
 nl1 : NestedList number
 nl1 =
@@ -41,7 +43,6 @@ nl1 =
 flattenAndCompare : NestedList a -> List a -> Test
 flattenAndCompare xs ys =
     test (toString "flatten " ++ (toString xs) ++ " == " ++ (toString ys)) <|
-        \() -> 
-            flatten xs 
-            |> Expect.equal ys
-
+        \() ->
+            flatten xs
+                |> Expect.equal ys
