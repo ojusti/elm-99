@@ -42,7 +42,7 @@ nl1 =
 
 flattenAndCompare : NestedList a -> List a -> Test
 flattenAndCompare xs ys =
-    test (toString "flatten " ++ (toString xs) ++ " == " ++ (toString ys)) <|
+    test ("flatten " ++ (toString xs) ++ " == " ++ (toString ys)) <|
         \() ->
             flatten xs
                 |> Expect.equal ys

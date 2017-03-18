@@ -4,6 +4,7 @@ import Test exposing (..)
 import Test6
 import Test7
 import TestExtra1
+import Test17
 
 
 all : Test
@@ -12,4 +13,5 @@ all =
         [ Test6.suite
         , Test7.suite
         , TestExtra1.suite
+        , Test17.suite
         ]
