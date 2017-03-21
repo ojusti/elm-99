@@ -13,5 +13,6 @@ flatten nl =
             [ x ]
 
         SubList xs ->
-            List.map flatten xs
+            xs
+                |> List.map flatten
                 |> List.concat
