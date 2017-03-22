@@ -32,11 +32,11 @@ isOdd x =
 
 
 dropWhile : (a -> Bool) -> List a -> List a -> Test
-dropWhile predicate xs ys =
-    test ("dropWhile " ++ toString predicate ++ " " ++ (toString xs) ++ " == " ++ (toString ys)) <|
+dropWhile predicate list expected =
+    test ("dropWhile " ++ toString predicate ++ " " ++ (toString list) ++ " == " ++ (toString expected)) <|
         \() ->
-            SrcExtra1.dropWhile predicate xs
-                |> Expect.equal ys
+            SrcExtra1.dropWhile predicate list
+                |> Expect.equal expected
 
 
 
