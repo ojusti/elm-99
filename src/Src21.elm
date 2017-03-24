@@ -7,7 +7,7 @@ import Tuple exposing (first, second)
 insertAt : Int -> a -> List a -> List a
 insertAt n v list =
     let
-        half =
+        part =
             split list (n - 1)
     in
-        first half ++ v :: second half
+        first part ++ [ v ] ++ second part
