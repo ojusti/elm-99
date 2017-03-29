@@ -13,6 +13,7 @@ import Test28a
 import Test31
 import Test34
 import Test1
+import Test2
 
 
 all : Test
@@ -30,4 +31,5 @@ all =
         , Test31.suite
         , Test34.suite
         , Test1.suite
+        , Test2.suite
         ]
