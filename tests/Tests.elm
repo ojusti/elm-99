@@ -18,6 +18,7 @@ import Test3
 import Test4
 import Test5
 import TestExtra2
+import Test8
 
 
 all : Test
@@ -40,4 +41,5 @@ all =
         , Test4.suite
         , Test5.suite
         , TestExtra2.suite
+        , Test8.suite
         ]
